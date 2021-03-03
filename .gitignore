@@ -1,3 +1,4 @@
+.vscode/
 ll_venv/
 __pycache__
 *.sqlite3
