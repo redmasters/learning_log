@@ -27,7 +27,7 @@ SECRET_KEY = '3$5cy)yl3355%9^t@-8wyd7f%9sp&9bpa#&$!@=)@x175fkd!#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['young-sands-14990.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
