@@ -134,11 +134,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # IMPORTANTE, as linha abaixo precisam ser adicionadas para que a pagina
 # redirecione para index apos o user logar/deslogar
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressionManifestStaticFilesStorage'
+# STATICFILES_DIRS = [
+    # BASE_DIR / 'static'
+# ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressionManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
