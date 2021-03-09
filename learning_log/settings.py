@@ -134,11 +134,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 # IMPORTANTE, as linha abaixo precisam ser adicionadas para que a pagina
 # redirecione para index apos o user logar/deslogar
-# STATICFILES_DIRS = [
-    # BASE_DIR / 'static'
-# ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressionManifestStaticFilesStorage'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static')
+) 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressionManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -166,12 +166,12 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Cabecalho para permitir todos os hosts
 ALLOWED_HOSTS = ['*']
 
-# Configuracao de recursos estaticos
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# # Configuracao de recursos estaticos
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = 'staticfiles'
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 # Ativa Django Heroku
 django_heroku.settings(locals())
