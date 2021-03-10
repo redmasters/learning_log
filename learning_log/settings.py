@@ -152,15 +152,19 @@ BOOTSTRAP3 = {
 }
 
 # Configuracoes para Heroku
-cwd = os.getcwd()
-if cwd == '/app' or cwd[:4] == '/tmp':
-    import dj_database_url
+# cwd = os.getcwd()
+# if cwd == '/app' or cwd[:4] == '/tmp':
+#     import dj_database_url
 
-    DATABASEs = {
-        'default':
-    dj_database_url.config(default='postgres://localhost')
+#     DATABASEs = {
+#         'default':
+#     dj_database_url.config(default='postgres://localhost')
 
-    }
+#     }
+
+if os.environ.get('IM_AM_HERO') == 'yes':
+    django_heroku.settings(locals())
+    DEBUG = False
 
 # Cabecalho 'X-Forwarded-Proto' para request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
